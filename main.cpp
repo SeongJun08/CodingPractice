@@ -52,7 +52,6 @@ int main()
 
 	while (true)
 	{
-		system( "cls" );
 		Draw(stage, STAGE_WIDTH, STAGE_HEIGHT);
 
 		if (IsClear(stage, STAGE_WIDTH, STAGE_HEIGHT))
@@ -60,15 +59,16 @@ int main()
 			std::cout << std::endl << "CLEAR!!!" << std::endl;
 			break;
 		}
+		char input{};
+		std::cout << "W : up, A : left, S : down, D :right, input : ";
+		std::cin >> input;
+
+		Update(stage, input, STAGE_WIDTH, STAGE_HEIGHT);
+
+		std::cout << " Practice" << std::endl;
 	}
 
-	char input{};
-	std::cout << "W : up, A : left, S : down, D :right, input : ";
-	std::cin >> input;
-
-	Update(stage, input, STAGE_WIDTH, STAGE_HEIGHT);
-
-	std::cout << " Practice" << std::endl;
+	
 }
 
 void Initialize(Object *stage, int w, int h, const char *stageData)

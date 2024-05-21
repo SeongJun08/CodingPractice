@@ -65,5 +65,5 @@ int main()
 
 	Update(stage, input, STAGE_WIDTH, STAGE_HEIGHT);
 
-	std::cout << "Check";
+	std::cout << " Practice" << std::endl;
 }

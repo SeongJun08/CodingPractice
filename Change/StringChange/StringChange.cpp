@@ -5,7 +5,7 @@
 
 using namespace std;
 
-bool wordBreak(string s, vector<string> &wordDict) 
+bool CanWordBreak(string s, vector<string> &wordDict) 
 {
     unordered_set<string> wordSet(wordDict.begin(), wordDict.end());
     vector<bool> dp(s.size() + 1, false);
@@ -28,15 +28,15 @@ bool wordBreak(string s, vector<string> &wordDict)
 int main() {
     string s1 = "helloworld";
     vector<string> wordDict1 = { "hello", "world" };
-    cout << boolalpha << wordBreak(s1, wordDict1) << endl;  // true
+    cout << boolalpha << CanWordBreak(s1, wordDict1) << endl;  // true
 
     string s2 = "applepenapple";
     vector<string> wordDict2 = { "apple", "pen" };
-    cout << boolalpha << wordBreak(s2, wordDict2) << endl;  // true
+    cout << boolalpha << CanWordBreak(s2, wordDict2) << endl;  // true
 
     string s3 = "catsandog";
     vector<string> wordDict3 = { "cats", "dog", "sand", "and", "cat" };
-    cout << boolalpha << wordBreak(s3, wordDict3) << endl;  // false
+    cout << boolalpha << CanWordBreak(s3, wordDict3) << endl;  // false
 
     return 0;
 }
